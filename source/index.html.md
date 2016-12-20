@@ -34,6 +34,26 @@ You must replace <code>test.yml</code> with a valid yml file in the local direct
 To install configurator first you need to ensure that the required dependencies are installed. This can be achieved by running bootstrap.sh.
 
 
+# Example YML
+
+```
+---
+- templateFile:
+    template: "authorized_keys.tmpl"
+    dest: "/home/jjohnson/.ssh/authorized_keys"
+    user: "jjohnson"
+    group: "jjohnson"
+    mode: "0400"
+    variables:
+        pubkey: "ssh-rsa AAAAB3Nz"
+
+- installPackage:
+    action: "install"
+    name: "nginx"
+
+```
+
+
 # DSL
 
 ## installPackage 
