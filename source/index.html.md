@@ -26,7 +26,7 @@ To configure a server using Configurator, simply pass the yaml file to the Cfg e
 </code>
 
 <aside class="notice">
-You must ensure that <code>test.yml</code> with a valid yml file in the local directory.
+Note: You must ensure that the yml file passed to cfg is valid yml and located in the local directory.
 </aside>
 
 You can run Configurator in "Verbose" mode by setting the environment variable "VERBOSE" to true
@@ -39,7 +39,7 @@ VERBOSE=true ./cfg test.yml
 # Installation
 
 To install configurator first you need to ensure that the required dependencies are installed. This can be achieved by running bootstrap.sh.
-Now your ready to configure your system using Configurator!
+Now you are ready to configure your system using Configurator!
 
 # Example YML
 
