@@ -1,9 +1,6 @@
 ---
 title: API Reference
 
-language_tabs:
-  - shell
-
 toc_footers:
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
@@ -11,7 +8,9 @@ toc_footers:
 search: true
 ---
 
-# Introduction
+# Configurator
+
+## Introduction
 
 Configurator is a rudimentary configuration management tool used to configure servers for production service of a simple PHP web application.
 
@@ -20,7 +19,7 @@ Configurator is a rudimentary configuration management tool used to configure se
 
 # Use
 
-> To run a build, simply pass the yaml file to cfg as the first argument.
+To configure a server using Configurator, simply pass the yaml file to the Cfg executable as the first argument. Please ensure that the yml file is in the same directory as the Cfg executable and that the file is formatted correctly.
 
 <code>
 ./cfg test.yml
@@ -30,13 +29,22 @@ Configurator is a rudimentary configuration management tool used to configure se
 You must ensure that <code>test.yml</code> with a valid yml file in the local directory.
 </aside>
 
+You can run Configurator in "Verbose" mode by setting the environment variable "VERBOSE" to true
+
+<code>
+VERBOSE=true ./cfg test.yml
+</code>
+
 
 # Installation
 
 To install configurator first you need to ensure that the required dependencies are installed. This can be achieved by running bootstrap.sh.
-
+Now your ready to configure your system using Configurator!
 
 # Example YML
+
+The example yml file shown on the right performs two actions. Firstly it adds a ssh public key to a user and then it installs the Nginx Package from Apt.
+
 
 ```
 ---
@@ -57,6 +65,9 @@ To install configurator first you need to ensure that the required dependencies 
 
 
 # DSL
+
+These are the currently implemented and aavailble functions that can be included in a yml config file along with their requisite parameters.
+
 
 ## installPackage 
 
@@ -93,6 +104,8 @@ recursive | False | Should the chown be recursive
 ## templateFile
 
 Create a file from a template
+
+More info about Jinja2 templates can be found here: [Jinja2](http://jinja.pocoo.org/docs/dev/)
 
 Parameter | Required | Description
 --------- | ------- | -----------
