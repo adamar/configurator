@@ -16,16 +16,18 @@ search: true
 Configurator is a rudimentary configuration management tool used to configure servers for production service of a simple PHP web application.
 
 
+
+
 # Use
 
-> To authorize, use this code:
+> To run a build, simply pass the yaml file to cfg as the first argument.
 
-```shell
-python cfg.py test.yml
-```
+<code>
+./cfg test.yml
+</code>
 
 <aside class="notice">
-You must replace <code>test.yml</code> with a valid yml file in the local directory.
+You must ensure that <code>test.yml</code> with a valid yml file in the local directory.
 </aside>
 
 
